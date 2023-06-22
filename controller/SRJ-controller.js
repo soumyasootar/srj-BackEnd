@@ -2,9 +2,6 @@ const express = require("express");
 const Post = require('../models/SRJ-model')
 
 // Endpoint to handle form submission
-// postController.js
-
-// const Post = require('./post');
 
 // Create a new post
 const createPost = async (req, res) => {
