@@ -11,7 +11,11 @@ const port = 3001;
 app.use(express.json());
 
 // Define routes
-app.use('/', routes);
+app.use('/blog', routes);
+
+app.get("/",(req,res)=>{
+ res.send("Welcome to SRJ Backend")
+})
 
 // Connect to MongoDB
 connectDB()
