@@ -6,12 +6,13 @@ const Post = require('../models/SRJ-model')
 // Create a new post
 const createPost = async (req, res) => {
   try {
-    const { title, content, author } = req.body;
-    const post = new Post({ title, content, author });
+    const { title, content, author, images } = req.body;
+    const post = new Post({ title, content, author, images });
     const savedPost = await post.save();
     res.status(201).json(savedPost);
   } catch (error) {
     res.status(500).json({ error: 'An error occurred while creating the post.' });
+    console.log(error);
   }
 };
 
