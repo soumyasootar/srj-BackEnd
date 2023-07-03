@@ -19,7 +19,7 @@ app.use('/blog', routes);
 app.get("/",(req,res)=>{
  res.send("Welcome to SRJ Backend")
 })
-ṭ
+
 // Connect to MongoDB
 connectDB()
   .then(() => {
